@@ -1,0 +1,9 @@
+
+<ion-content>
+  <!-- [(ngModel)]="strSearch" [showCancelButton]="shouldShowCancel" (ionInput)="onInput($event)" (ionCancel)="onCancel($event)" -->
+  <ion-searchbar [(ngModel)]="strSearch" placeholder="Ingrese texto a buscar" (ionInput)="filterItems($event)"></ion-searchbar>
+  <div *ngIf="searching" class="spinner-container">
+    <ion-spinner icon="ripple" class="spinner-light"></ion-spinner>
+  </div>
+  
+</ion-content>
